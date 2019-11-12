@@ -1,26 +1,4 @@
-let data = [
-  {
-    id: 1,
-    title: "Ant Design Title 1",
-    complete: false
-  },
-  {
-    id: 2,
-    title: "Ant Design Title 2",
-    complete: false
-  },
-  {
-    id: 3,
-    title: "Ant Design Title 3",
-    complete: false
-  },
-  {
-    id: 4,
-    title: "Ant Design Title 4",
-    complete: true
-  }
-];
-
+let data = [];
 export const getAllTodos = () => {
   return Promise.resolve(data);
 };
