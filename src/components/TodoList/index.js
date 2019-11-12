@@ -15,6 +15,7 @@ const TodoList = ({ data, onFinish, onRemove }) => {
             <List.Item
               actions={[
                 <Button
+                  disabled={item.complete}
                   data-testid="todo-item-finish"
                   onClick={onFinish && onFinish.bind(null, item.id)}
                   type="link"
@@ -31,7 +32,15 @@ const TodoList = ({ data, onFinish, onRemove }) => {
               ]}
             >
               <List.Item.Meta
-                title={<a href="https://ant.design">{item.title}</a>}
+                title={
+                  <span
+                    style={{
+                      textDecoration: item.complete ? "line-through" : ""
+                    }}
+                  >
+                    {item.title}
+                  </span>
+                }
               />
             </List.Item>
           )}
